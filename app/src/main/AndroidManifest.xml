@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.dummy.psdl">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="Space Impact"
+        android:theme="@style/AppTheme"
+        android:largeHeap="true">
+
+        <!-- MainActivity: Entry point for the app -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="Space Impact"
+            android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- GameActivity: Ensure it explicitly declares exported -->
+        <activity
+            android:name=".GameActivity"
+            android:exported="true"
+            android:label="@string/title_activity_game">
+            <intent-filter>
+                <action android:name="com.dummy.psdl.GameActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- Highscore Activity -->
+        <activity
+            android:name=".Highscore"
+            android:exported="true"
+            android:label="@string/title_activity_highscore">
+            <intent-filter>
+                <action android:name="com.dummy.psdl.Highscore" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- MainHighScore Activity -->
+        <activity
+            android:name=".MainHighScore"
+            android:exported="true"
+            android:label="@string/title_activity_main_high_score">
+            <intent-filter>
+                <action android:name="com.dummy.psdl.MainHighScore" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+    </application>
+</manifest>
